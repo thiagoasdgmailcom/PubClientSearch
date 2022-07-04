@@ -1,0 +1,15 @@
+com\bdyu\sopacommunication\publicationsws\Publication.class
+com\bdyu\sopacommunication\publicationsws\PubWS.class
+com\bdyu\sopacommunication\publicationsws\GetPublicationsStringFromTitle.class
+com\bdyu\sopacommunication\publicationsws\GetAuthorByIDResponse.class
+com\bdyu\sopacommunication\publicationsws\ObjectFactory.class
+com\bdyu\sopacommunication\publicationsws\GetPublicationsFromTitle.class
+com\bdyu\sopacommunication\publicationsws\GetAuthorByID.class
+com\bdyu\sopacommunication\publicationsws\PubWS_Service.class
+com\bdyu\sopacommunication\publicationsws\GetPublicationsCountFromTitleResponse.class
+com\bdyu\sopacommunication\publicationsws\Author.class
+com\bdyu\sopacommunication\publicationsws\GetPublicationsCountFromTitle.class
+com\bdyu\sopacommunication\publicationsws\GetPublicationsFromTitleResponse.class
+com\bdyu\sopacommunication\publicationsws\package-info.class
+com\bdyu\sopacommunication\pubclientsearch\PubClientSearch.class
+com\bdyu\sopacommunication\publicationsws\GetPublicationsStringFromTitleResponse.class

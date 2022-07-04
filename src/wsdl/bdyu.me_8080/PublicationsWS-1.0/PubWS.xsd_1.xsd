@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.2 (UNKNOWN-17d59c9; 2018-09-26T15:16:30-0700) JAXWS-RI/2.3.1 JAXWS-API/2.3.1 JAXB-RI/2.3.1 JAXB-API/2.3.1 svn-revision#unknown. --><xs:schema xmlns:tns="http://publicationsws.sopacommunication.bdyu.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://publicationsws.sopacommunication.bdyu.com/">
+
+<xs:element name="getAuthorByID" type="tns:getAuthorByID"/>
+
+<xs:element name="getAuthorByIDResponse" type="tns:getAuthorByIDResponse"/>
+
+<xs:element name="getPublicationsCountFromTitle" type="tns:getPublicationsCountFromTitle"/>
+
+<xs:element name="getPublicationsCountFromTitleResponse" type="tns:getPublicationsCountFromTitleResponse"/>
+
+<xs:element name="getPublicationsFromTitle" type="tns:getPublicationsFromTitle"/>
+
+<xs:element name="getPublicationsFromTitleResponse" type="tns:getPublicationsFromTitleResponse"/>
+
+<xs:element name="getPublicationsStringFromTitle" type="tns:getPublicationsStringFromTitle"/>
+
+<xs:element name="getPublicationsStringFromTitleResponse" type="tns:getPublicationsStringFromTitleResponse"/>
+
+<xs:complexType name="getPublicationsFromTitle">
+<xs:sequence>
+<xs:element name="sTitle" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPublicationsFromTitleResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:publication" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="publication">
+<xs:sequence>
+<xs:element name="pAuthorList" type="tns:author" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="pageEnd" type="xs:int"/>
+<xs:element name="pageStart" type="xs:int"/>
+<xs:element name="publishYear" type="xs:int"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="author">
+<xs:sequence>
+<xs:element name="CPF" type="xs:string" minOccurs="0"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPublicationsStringFromTitle">
+<xs:sequence>
+<xs:element name="sTitle" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPublicationsStringFromTitleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPublicationsCountFromTitle">
+<xs:sequence>
+<xs:element name="sTitle" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPublicationsCountFromTitleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthorByID">
+<xs:sequence>
+<xs:element name="sID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthorByIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:author" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
